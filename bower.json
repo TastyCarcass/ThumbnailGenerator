@@ -1,12 +1,13 @@
 {
   "name": "thumbnailgenerator",
-  "version": "0.0.0",
-  "homepage": "https://github.com/SmashHouseUK/ThumbnailGenerator",
+  "description": "An app for quickly creating thumbnails",
+  "main": "app/main.js",
   "authors": [
-    "sh-Ook <tastycarcass@outlook.com>"
+    "sh-Ook"
   ],
-  "description": "a thumbnail creator for use with SSBM",
-  "license": "MIT",
+  "license": "ISC",
+  "homepage": "https://github.com/TastyCarcass/ThumbnailGenerator",
+  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
@@ -14,7 +15,7 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "angular": "~1.5.3"
+  "devDependencies": {
+    "angular": "^1.7.4"
   }
 }

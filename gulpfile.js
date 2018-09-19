@@ -1,9 +1,7 @@
 
 var gulp  = require('gulp'),
-    electron      = require('electron-prebuilt'),
     concat = require('gulp-concat'),
-    watch = require('gulp-watch'),
-    runElectron = require("gulp-run-electron");
+    watch = require('gulp-watch');
 
 gulp.task('scripts', function(){
     return gulp.src('pregulp/scripts/**/**.*')
@@ -12,7 +10,7 @@ gulp.task('scripts', function(){
 });
 
 gulp.task('html', function(){
-    return gulp.src('pregulp/html/**.html')
+    return gulp.src('pregulp/**/**.html')
         .pipe(gulp.dest('.build/app/'));
 });
 
@@ -61,11 +59,6 @@ gulp.task('watch', function(){
     gulp.watch('pregulp/**/*.html',['html']);
 });
 
-gulp.task('dostuff', ['scripts', 'html', 'css', 'partials', 'images', 'fonts']);
+gulp.task('dostuff', ['scripts', 'html', 'css', 'partials', 'images', 'fonts', 'bowerFiles']);
 
 gulp.task('setup', ['dostuff', 'packageFile', 'mainJSFile', 'watch']);
-
-gulp.task('run', function () {
-    gulp.src("app")
-    .pipe(runElectron(["--cli-argument", "--another"], {cwd: ".build/app"}));
-});
