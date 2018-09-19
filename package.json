@@ -1,0 +1,25 @@
+{
+  "name": "thumbnailgenerator",
+  "version": "1.0.0",
+  "description": "An app for quickly creating thumbnails for Super Smash Bros. Melee",
+  "main": "app/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://sh-Ook@github.com/SmashHouseUK/ThumbnailGenerator.git"
+  },
+  "author": "sh-Ook",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SmashHouseUK/ThumbnailGenerator/issues"
+  },
+  "homepage": "https://github.com/SmashHouseUK/ThumbnailGenerator#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-electron": "0.0.10",
+    "gulp-run-electron": "^1.2.2",
+    "electron": "^0.4.1"
+  }
+}

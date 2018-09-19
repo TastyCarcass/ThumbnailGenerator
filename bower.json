@@ -1,0 +1,20 @@
+{
+  "name": "thumbnailgenerator",
+  "version": "0.0.0",
+  "homepage": "https://github.com/SmashHouseUK/ThumbnailGenerator",
+  "authors": [
+    "sh-Ook <tastycarcass@outlook.com>"
+  ],
+  "description": "a thumbnail creator for use with SSBM",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.3"
+  }
+}

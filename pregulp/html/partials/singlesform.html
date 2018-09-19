@@ -1,0 +1,16 @@
+Singles Mode<br>
+<div ng-repeat = "n in gameSettings.leetHacker track by $index">
+    Player {{$index + 1}}
+    <br>
+    Name:
+    <input type="text"
+           ng-model="name"
+           ng-change = "gameSettings.singlesPlayerNames[$index] = name">
+    <br>
+    Character:
+    <select ng-model = "character"
+            ng-options = "name for name in fileReader.getCharacterList()"
+            ng-change = "gameSettings.changeSinglesCharacter($index,0, character)">
+    </select>
+    <br>
+</div>

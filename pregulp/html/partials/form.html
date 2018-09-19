@@ -1,0 +1,47 @@
+<div>
+    <button ng-click = "gen();">Generate</button>
+    <button ng-click = "$scope.showCanvas = !$scope.showCanvas;">Show Preview</button>
+    <button ng-click = "createImage();">Download PNG</button><br>
+    <div class = "entryForm"><div class = dateEntry>Enter date:
+        <input type="text"
+               ng-model="date"
+               ng-change = "gameSettings.date = date">
+        <br>
+    </div>
+    <div class = "changeBackground">Select background file:
+    <select ng-model = "background"
+            ng-options = "name for name in fileReader.getBackgroundList()"
+            ng-change = "gameSettings.changeBackground(background)">
+    </select>
+    </div>
+    <div class = "changeGameLogo">Select game logo file:
+        <select ng-model = "gameLogo"
+                ng-options = "name for name in fileReader.getGameLogoList()"
+                ng-change = "gameSettings.changeGameLogo(gameLogo)">
+        </select>
+    </div>
+    <div class = "changeBorder">Select border file:
+        <select ng-model = "border"
+                ng-options = "name for name in fileReader.getBorderList()"
+                ng-change = "gameSettings.changeBorder(border)">
+        </select>
+    </div>
+    <div class = "changeGameType">Enter game type:
+        <br>line 1:
+        <input type="text"
+               ng-model="gameTypeLine1"
+               ng-change = "gameSettings.gameTypeText[0] = gameTypeLine1">
+        <br>line 2:
+        <input type="text"
+               ng-model="gameTypeLine2"
+               ng-change = "gameSettings.gameTypeText[1] = gameTypeLine2">
+    </div>
+    <button ng-click = "gameSettings.toggleDoublesMode()">Toggle Singles or Doubles</button>
+    <div ng-show="!gameSettings.doublesMode" singles-form></div>
+    <div ng-show="gameSettings.doublesMode" doubles-form></div>
+    <br>
+    </div>
+    <div ng-show="$scope.showCanvas">
+        <div thumbnail-canvas></div>
+    </div>
+</div>
