@@ -35,7 +35,7 @@ gulp.task('fonts', function(){
 });
 
 gulp.task('bowerFiles', function(){
-    return gulp.src('pregulp/bower_components/**/*.*')
+    return gulp.src('bower_components/**/*.*')
         .pipe(gulp.dest('.build/bower_components'))
 });
 

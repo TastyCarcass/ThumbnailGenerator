@@ -7,15 +7,15 @@
                 var me = this;
 
                 var addBackground = function () {
-                    imageService.addImage('background', __dirname + '/' + gameSettings.backgroundLocation + gameSettings.selectedBackground + '.png');
+                    imageService.addImage('background', gameSettings.backgroundLocation + gameSettings.selectedBackground + '.png');
                 };
 
                 var addBorder = function () {
-                    imageService.addImage('border', __dirname + '/' + gameSettings.borderLocation + gameSettings.selectedBorder + '.png');
+                    imageService.addImage('border', gameSettings.borderLocation + gameSettings.selectedBorder + '.png');
                 };
 
                 var addLogo = function () {
-                    imageService.addImage('logo', __dirname + '/' + gameSettings.gameLogoLocation + gameSettings.selectedGameLogo + '.png');
+                    imageService.addImage('logo', gameSettings.gameLogoLocation + gameSettings.selectedGameLogo + '.png');
                 };
 
                 var addDoublesCharacters = function () {
