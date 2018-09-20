@@ -40,17 +40,17 @@
                 me.doublesMode = !me.doublesMode;
             };
 
-            me.selectedBackground = 'background';
+            me.selectedBackground = 'BACKGROUND';
             me.changeBackground = function (backgroundName) {
                 me.selectedBackground = backgroundName;
             };
 
-            me.selectedBorder = 'border';
+            me.selectedBorder = 'BORDER';
             me.changeBorder = function (bannerName) {
                 me.selectedBorder = bannerName;
             };
 
-            me.selectedGameLogo = 'melee logo';
+            me.selectedGameLogo = 'MELEE LOGO';
             me.changeGameLogo = function (logoName) {
                 me.selectedLogo = logoName;
             };
@@ -59,7 +59,7 @@
 
 
             me.doublesCharacterList = ['FOX', 'FOX', 'FOX', 'FOX'];
-            me.singlesCharacterList = [['fox', 'none', 'none'], ['fox', 'none', 'none']];
+            me.singlesCharacterList = [['FOX', 'none', 'none'], ['FOX', 'none', 'none']];
 
             me.changeSinglesCharacter = function (playerNumber, characterNumber, characterName) {
                 me.singlesCharacterList[playerNumber][characterNumber] = characterName;

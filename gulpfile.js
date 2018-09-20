@@ -44,11 +44,6 @@ gulp.task('packageFile', function(){
         .pipe(gulp.dest('.build/'))
 });
 
-gulp.task('mainJSFile', function(){
-    return gulp.src('pregulp/main.js')
-        .pipe(gulp.dest('.build/app/'))
-});
-
 gulp.task('watch', function(){
     gulp.watch('pregulp/**/*.js',['scripts']);
     gulp.watch('pregulp/**/*.html',['html']);
@@ -56,4 +51,4 @@ gulp.task('watch', function(){
 
 gulp.task('dostuff', ['scripts', 'html', 'css', 'partials', 'images', 'fonts', 'bowerFiles']);
 
-gulp.task('setup', ['dostuff', 'packageFile', 'mainJSFile', 'watch']);
+gulp.task('setup', ['dostuff', 'packageFile', 'watch']);

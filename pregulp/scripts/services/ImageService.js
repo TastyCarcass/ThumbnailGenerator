@@ -6,12 +6,11 @@
             function($interval, globalCanvas, drawer, gameSettings){
             var me = this;
 
-            var gameImage = function(name, src){
+            var gameImage = function(name){
                 this.name = name;
                 this.image = new Image;
                 this.loaded =  false;
                 this.pos = [0,0];
-                this.src = src;
             };
 
             me.getNumberOfImagesToLoad = function(){
@@ -40,8 +39,7 @@
                 }
             };
 
-            me.waitThenDraw = function(){
-                console.log(me.gameImages);
+            me.waitThenDraw = function() {
                 me.timer= $interval(me.getNumberOfImagesToLoad, 2);
             };
 
@@ -63,10 +61,11 @@
             };
 
             me.loadImage = function (name, imageSource) {
-                var img = new gameImage(name, imageSource);
+                var img = new gameImage(name);
                 img.image.onload = function(){
                     img.loaded = true;
                 };
+                console.log('source ' + name, imageSource);
                 img.image.src = imageSource;
                 me.gameImages.push(img);
             };

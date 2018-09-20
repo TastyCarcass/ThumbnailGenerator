@@ -3,6 +3,15 @@
     src: url("fonts/BebasKai-Regular.otf") format("opentype");
 }
 
+.logo {
+    background-image: url('images/pepe.gif');
+    height: 100px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
 .customFont {
      font-family: BebasKai, serif;
  }
