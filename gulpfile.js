@@ -6,42 +6,37 @@ var gulp  = require('gulp'),
 gulp.task('scripts', function(){
     return gulp.src('pregulp/scripts/**/**.*')
         .pipe(concat('scripts.js'))
-        .pipe(gulp.dest('.build/app/scripts'));
+        .pipe(gulp.dest('.build/scripts'));
 });
 
 gulp.task('html', function(){
     return gulp.src('pregulp/**/**.html')
-        .pipe(gulp.dest('.build/app/'));
+        .pipe(gulp.dest('.build'));
 });
 
 gulp.task('css', function(){
     return gulp.src('pregulp/CSS/**.css')
-        .pipe(gulp.dest('.build/app/'));
+        .pipe(gulp.dest('.build'));
 });
 
 gulp.task('partials', function(){
     return gulp.src('pregulp/html/partials/**.html')
-        .pipe(gulp.dest('.build/app/partials/'));
+        .pipe(gulp.dest('.build/partials/'));
 });
 
 gulp.task('images', function(){
     return gulp.src('pregulp/images/**/**.*')
-        .pipe(gulp.dest('.build/app/images'));
+        .pipe(gulp.dest('.build/images'));
 });
 
 gulp.task('fonts', function(){
     return gulp.src('pregulp/fonts/**/**.*')
-        .pipe(gulp.dest('.build/app/fonts'));
+        .pipe(gulp.dest('.build/fonts'));
 });
 
 gulp.task('bowerFiles', function(){
-    return gulp.src('bower_components/**/*.*')
+    return gulp.src('pregulp/bower_components/**/*.*')
         .pipe(gulp.dest('.build/bower_components'))
-});
-
-gulp.task('nodeFiles', function(){
-    return gulp.src('node_modules/**/*.*')
-        .pipe(gulp.dest('.build/node_modules'))
 });
 
 gulp.task('packageFile', function(){
