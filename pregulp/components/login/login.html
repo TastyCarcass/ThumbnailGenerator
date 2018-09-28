@@ -1,0 +1,13 @@
+<div class="user-login__title">LOGIN SCREEN</div>
+<div class = "user-login__form">Username:
+    <input type="text"
+           ng-model="username"
+           ng-change = "userSettings.username = username">
+    <br>
+    Password:
+    <input type="text"
+           ng-model="password"
+           ng-change = "userSettings.password = password">
+    <br>
+    <button ng-click = "LoginCtrl.login();">SUBMIT</button><br>
+</div>

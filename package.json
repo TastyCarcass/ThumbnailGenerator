@@ -17,6 +17,13 @@
     "angular": "^1.7.4",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
-    "gulp-watch": "^5.0.1"
+    "gulp-watch": "^5.0.1",
+    "json-loader": "^0.5.7",
+    "webpack": "^4.20.2"
+  },
+  "dependencies": {
+    "amazon-cognito-identity-js": "^2.0.30",
+    "aws-amplify": "^1.1.4",
+    "aws-amplify-angular": "^2.0.7"
   }
 }

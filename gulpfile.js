@@ -4,7 +4,7 @@ var gulp  = require('gulp'),
     watch = require('gulp-watch');
 
 gulp.task('scripts', function(){
-    return gulp.src('pregulp/scripts/**/**.*')
+    return gulp.src('pregulp/**/**.js')
         .pipe(concat('scripts.js'))
         .pipe(gulp.dest('.build/scripts'));
 });
@@ -39,11 +39,6 @@ gulp.task('bowerFiles', function(){
         .pipe(gulp.dest('.build/bower_components'))
 });
 
-gulp.task('packageFile', function(){
-    return gulp.src('package.json')
-        .pipe(gulp.dest('.build/'))
-});
-
 gulp.task('watch', function(){
     gulp.watch('pregulp/**/*.js',['scripts']);
     gulp.watch('pregulp/**/*.html',['html']);
@@ -51,4 +46,4 @@ gulp.task('watch', function(){
 
 gulp.task('dostuff', ['scripts', 'html', 'css', 'partials', 'images', 'fonts', 'bowerFiles']);
 
-gulp.task('setup', ['dostuff', 'packageFile', 'watch']);
+gulp.task('setup', ['dostuff', 'watch']);

@@ -7,13 +7,17 @@
 </head>
 <body>
 <main>
-<script src ='bower_components/angular/angular.js'></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.js"></script>
+    <script src ='bower_components/amazon-cognito-identity-js/dist/aws-cognito-sdk.js'></script>
+    <script src ='bower_components/amazon-cognito-identity-js/dist/amazon-cognito-identity.js'></script>
+    <script src ='bower_components/angular/angular.js'></script>
     <script src = 'scripts/scripts.js'></script>
     <div class="customFont" style="visibility: hidden; height: 0"></div>
     <h2 class="customFont">SMASH HOUSE</h2>
     <h3 class="customFont">Thumbnail Generator</h3>
 <div ng-controller = "MainController" >
-    <div form></div>
+    <login></login>
+    <div ng-if="UserSettings.loggedIn" form></div>
     <div class="logo"></div>
 </div>
 </main>
