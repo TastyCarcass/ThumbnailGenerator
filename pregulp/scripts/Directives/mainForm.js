@@ -1,9 +1,9 @@
 (function(){
     'use strict';
     angular.module('ThumbnailGenerator')
-        .directive('form', function(){
+        .directive('mainForm', function(){
             return {
-                templateUrl: 'partials/form.html'
+                templateUrl: 'partials/mainform.html'
             };
         })
 })();

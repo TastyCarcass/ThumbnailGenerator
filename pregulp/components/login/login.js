@@ -6,26 +6,24 @@
             controllerAs: 'LoginCtrl',
             controller: ['UserSettings', function (userSettings) {
                 var userPool = new AmazonCognitoIdentity.CognitoUserPool({
-                    UserPoolId : 'eu-west-1_lzT9XRSiA',
-                    ClientId : '1u09nrvm4if6f371e9tptrhu2a'
+                    UserPoolId : 'eu-west-1_ClavJ1xvM',
+                    ClientId : 'leu49fpjc3tfegchnqe2g57gl'
                 });
 
-                var attributeList = [];
-
-                this.login = () => {
-                    var dataEmail = {
+                this.signup = (username, password, email) => {
+                    var attributeList = [];
+                    attributeList.push(new AmazonCognitoIdentity.CognitoUserAttribute({
                         Name : 'email',
-                        Value : userSettings.name
-                    };
+                        Value : email
+                    }));
 
-                    userPool.signUp('username', 'password', attributeList, null, function(err, result){
+                    userPool.signUp(username, password, attributeList, null, function(err, result){
                         if (err) {
-                            alert(err);
+                            console.log(err, result);
                             return;
                         }
 
-                        cognitoUser = result.user;
-                        console.log('user name is ' + cognitoUser.getUsername());
+                        var cognitoUser = result.user;
                     });
                 }
             }]
