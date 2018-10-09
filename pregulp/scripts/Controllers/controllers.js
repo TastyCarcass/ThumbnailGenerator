@@ -1,8 +1,8 @@
 (function() {
     'use strict';
     angular.module('ThumbnailGenerator')
-        .controller('MainController', ['$scope', 'ScreenshotCreator', 'GlobalCanvas', 'CanvasEngine', 'ImageService', 'FileReader', 'GameSettings', 'UserSettings',
-            function($scope, screenshotCreator, globalCanvas, canvasEngine, imageService, fileReader, gameSettings, userSettings) {
+        .controller('MainController', ['$scope', 'ScreenshotCreator', 'GlobalCanvas', 'CanvasEngine', 'ImageService', 'FileReader', 'GameSettings', 'UserSettings', 'Cognito',
+            function($scope, screenshotCreator, globalCanvas, canvasEngine, imageService, fileReader, gameSettings, userSettings, Cognito) {
                 $scope.gen = function(){
                     imageService.resetImages();
                     canvasEngine.addImages();

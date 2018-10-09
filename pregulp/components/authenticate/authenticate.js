@@ -1,9 +1,9 @@
 (function(){
     'use strict';
     angular.module('ThumbnailGenerator')
-        .component('login', {
-            templateUrl: './components/login/login.html',
-            controllerAs: 'LoginCtrl',
+        .component('authenticate', {
+            templateUrl: './components/authenticate/authenticate.html',
+            controllerAs: 'AuthenticateCtrl',
             controller: ['Cognito', function (Cognito) {
                 this.authenticate = Cognito.authenticateUser.bind(Cognito);
             }]
